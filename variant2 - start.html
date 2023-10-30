@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Экзамен вариант 2</title>
+	<style>
+		body {
+			margin: 15px 40px;
+			font-family: sans-serif;
+		}
+
+		#wrap {
+			width: 700px;
+			margin: 0 auto;
+		}
+
+		table {
+			border-collapse: collapse;
+			border: 1px solid #333;
+			width: 100%;
+		}
+
+		td,
+		th {
+			padding: 6px;
+			text-align: right;
+			border: 1px solid #333;
+		}
+
+		td:first-child {
+			width: 350px;
+		}
+
+		.header {
+			padding: 5px;
+			display: inline-block;
+			color: orange;
+			font-weight: bold;
+		}
+
+		.header:hover {
+			color: #d30;
+			text-decoration: none;
+		}
+
+		td img {
+			width: 100px;
+			margin-right: 15px;
+			display: none;
+		}
+
+		.price {
+			font-size: 1.1em;
+			font-weight: bold;
+			color: #d00;
+		}
+
+		.frm input {
+			text-align: right;
+		}
+
+		.del {
+			background: url(books/delx.gif) no-repeat;
+			width: 15px;
+			height: 15px;
+			cursor: pointer;
+			text-align: center;
+			border: none;
+			color: #fff;
+		}
+
+		.del:focus,
+		.del:active {
+			border: none;
+			outline: none;
+		}
+
+		#buyBtn {
+			width: 135px;
+			cursor: pointer;
+			margin: 20px 0;
+			background-color: #f90;
+			color: #fff;
+			border: none;
+			border-radius: 10px 0 10px 0;
+			padding: 5px 10px;
+		}
+
+		#buyBtn:focus,
+		#buyBtn:active {
+			outline: none;
+			border: none;
+			background-color: #ff8000;
+		}
+		.showedTable{
+			width: 300px; margin: 0; position: absolute; top: 100%; right: 30%;	
+		}
+		</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<h2>Заказ электронных книг</h2>
+		<form name="elbooks" id="elbooks">
+			<table id="bookTable">
+				<tr id="head">
+					<th>Наименование</th>
+					<th>Код товара</th>
+					<th> Кол-во</th>
+					<th>Стоимость, грн.</th>
+				</tr>
+				<tr>
+					<td><a href="books/airbook_city_led.png" class="header">Электронная книга Airbook City LED</a></td>
+					<td class="code">83751</td>
+					<td class="frm"> <input type="number" min="0" max="10" size="4" maxlength="3" value="1"
+							data-price="2999"> </td>
+					<td class="price">2999</td>
+				</tr>
+				<tr>
+					<td><a href="books/PocketBook-614-basic-3-white.jpg" class="header">Электронная книга PocketBook 614
+							Basic 3 White</a></td>
+					<td class="code">83750</td>
+					<td class="frm"> <input type="number" min="0" max="10" size="4" maxlength="3" value="1"
+							data-price="2499"> </td>
+					<td class="price">2499</td>
+				</tr>
+				<tr>
+					<td><a href="books/evromedia_one.jpg" class="header">Evromedia E-Учебник One</a></td>
+					<td class="code">81890</td>
+					<td class="frm"> <input type="number" min="0" max="10" size="4" maxlength="3" value="1"
+							data-price="2199"> </td>
+					<td class="price">2199</td>
+				</tr>
+				<tr>
+					<td><a href="books/Amazon-Kindle-paperwhite-10th-gen-8GB.jpg" class="header">Электронная книга
+							Amazon Kindle Paperwhite 10th Gen 8GB</a></td>
+					<td class="code">80673</td>
+					<td class="frm"> <input type="number" min="0" max="10" size="4" maxlength="3" value="1"
+							data-price="3249"> </td>
+					<td class="price">3249</td>
+				</tr>
+				<tr>
+					<td><a href="books/Amazon-Kindle-All-new-10th-Gen.jpg" class="header">Электронная книга Amazon
+							Kindle All-new 10th Gen</a></td>
+					<td class="code">83340</td>
+					<td class="frm"> <input type="number" min="0" max="10" size="4" maxlength="3" value="1"
+							data-price="2778"> </td>
+					<td class="price">2778</td>
+				</tr>
+				<tr>
+					<td><a href="books/airbook_city_base.jpg" class="header">Электронная книга AirBook City Base</a>
+						<img src="" alt="AirBook City Base" title="AirBook City Base" />
+					</td>
+					<td class="code">83453</td>
+					<td class="frm"> <input type="number" min="0" max="10" size="4" maxlength="3" value="1"
+							data-price="2499"> </td>
+					<td class="price">2499</td>
+				</tr>
+				<tr>
+					<td><a href="books/onyx-cleopatra.jpg" class="header">Электронная книга Onyx BOOX Cleopatra 3</a>
+					</td>
+					<td class="code">83737</td>
+					<td class="frm"> <input type="number" min="0" max="10" size="4" maxlength="3" value="1"
+							data-price="7535"> </td>
+					<td class="price">7535</td>
+				</tr>
+				<tr>
+					<td><a href="books/pocketbook-touch-hd-3.png" class="header">Электронная книга PocketBook 632 Touch
+							HD 3 Copper</a></td>
+					<td class="code">96224</td>
+					<td class="frm"> <input type="number" min="0" max="10" size="4" maxlength="3" value="1"
+							data-price="5099"> </td>
+					<td class="price">5099</td>
+				</tr>
+
+			</table>
+		</form>
+		<div><button id="buyBtn">оформить заказ</button></div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
